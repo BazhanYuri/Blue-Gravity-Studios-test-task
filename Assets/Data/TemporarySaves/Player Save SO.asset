@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4e3e67144c55a4bb797fbee50e6fe7, type: 3}
+  m_Name: Player Save SO
+  m_EditorClassIdentifier: 
+  _items:
+    gridSize: {x: 0, y: 0}
+    cellSize: {x: 0, y: 0}
+    cells:
+    - row:
+      - {fileID: 11400000, guid: f726e467c2c1c62409152cc657bc9332, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+    - row:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 11400000, guid: 78a3232a78bbcdf4a9879d5b43fb28cc, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+    - row:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 11400000, guid: 39fd3251b3ade754bb25b57cc1f3ed16, type: 2}
+      - {fileID: 11400000, guid: de3f7c56aee9d1548aa21853279b46a1, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
