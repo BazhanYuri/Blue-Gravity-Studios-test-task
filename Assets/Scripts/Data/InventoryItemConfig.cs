@@ -7,4 +7,6 @@ public class InventoryItemConfig : ScriptableObject
 {
     [SerializeField] private Sprite _icon;
     [SerializeField] private int _price;
+
+    public Sprite Icon { get => _icon;}
 }

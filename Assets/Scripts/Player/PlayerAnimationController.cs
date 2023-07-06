@@ -11,6 +11,8 @@ public class PlayerAnimationController
     private Direction _currentDirection = Direction.Up;
     private short _animationIndex;
 
+    private IEnumerator _coroutine;
+
     public PlayerAnimationController(Player player, IMovement movement, MonoBehaviour monoBehaviour)
     {
         _player = player;
@@ -58,10 +60,11 @@ public class PlayerAnimationController
     {
         if (_isRunParsing == false)
         {
-            _monoBehaviour.StartCoroutine(ParseRunAnimation(direction));
+            _coroutine = ParseRunAnimation(direction);
+            _monoBehaviour.StartCoroutine(_coroutine);
             if (_currentDirection != direction)
             {
-                _monoBehaviour.StopAllCoroutines();
+                _monoBehaviour.StopCoroutine(_coroutine);
                 _isRunParsing = false;
             }
             _currentDirection = direction;

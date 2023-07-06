@@ -44,6 +44,15 @@ public partial class @MyInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""44656bad-6ba8-459a-8ee7-1cb6ad3a3c6f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -112,6 +121,17 @@ public partial class @MyInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0338c99b-247b-4b8c-93fd-0f3b973032dd"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -122,6 +142,7 @@ public partial class @MyInputActions : IInputActionCollection2, IDisposable
         m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
         m_Newactionmap_Movement = m_Newactionmap.FindAction("Movement", throwIfNotFound: true);
         m_Newactionmap_Inventory = m_Newactionmap.FindAction("Inventory", throwIfNotFound: true);
+        m_Newactionmap_Interact = m_Newactionmap.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -183,12 +204,14 @@ public partial class @MyInputActions : IInputActionCollection2, IDisposable
     private INewactionmapActions m_NewactionmapActionsCallbackInterface;
     private readonly InputAction m_Newactionmap_Movement;
     private readonly InputAction m_Newactionmap_Inventory;
+    private readonly InputAction m_Newactionmap_Interact;
     public struct NewactionmapActions
     {
         private @MyInputActions m_Wrapper;
         public NewactionmapActions(@MyInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Newactionmap_Movement;
         public InputAction @Inventory => m_Wrapper.m_Newactionmap_Inventory;
+        public InputAction @Interact => m_Wrapper.m_Newactionmap_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -204,6 +227,9 @@ public partial class @MyInputActions : IInputActionCollection2, IDisposable
                 @Inventory.started -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnInventory;
                 @Inventory.performed -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnInventory;
                 @Inventory.canceled -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnInventory;
+                @Interact.started -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_NewactionmapActionsCallbackInterface = instance;
             if (instance != null)
@@ -214,6 +240,9 @@ public partial class @MyInputActions : IInputActionCollection2, IDisposable
                 @Inventory.started += instance.OnInventory;
                 @Inventory.performed += instance.OnInventory;
                 @Inventory.canceled += instance.OnInventory;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -222,5 +251,6 @@ public partial class @MyInputActions : IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }

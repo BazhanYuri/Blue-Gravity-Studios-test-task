@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 8695267072545002941}
   - component: {fileID: 8761544956674815717}
   - component: {fileID: 7842758939727573761}
+  - component: {fileID: 8029586352514375575}
   - component: {fileID: 2361621608267704693}
   m_Layer: 0
   m_Name: Player
@@ -263,6 +264,22 @@ CapsuleCollider2D:
   m_Offset: {x: -0.010189772, y: -0.23301089}
   m_Size: {x: 0.102431774, y: 0.12734056}
   m_Direction: 0
+--- !u!58 &8029586352514375575
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695267072545002943}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &2361621608267704693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 8761544956674815717}
   _playerPartVisual: {fileID: 8482794041268565026}
+  _playerSaveSO: {fileID: 11400000, guid: e22a1833b7293b54482d4fd69ebcc8f5, type: 2}
+  _buttonInteractionViewPrefab: {fileID: -5469969503983162236, guid: d0bf933b2480f094eb0798bdda95fffb, type: 3}
 --- !u!1 &9051661125722081286
 GameObject:
   m_ObjectHideFlags: 0

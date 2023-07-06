@@ -425,6 +425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inventoryView: {fileID: 1384276170229694791}
   _inventoryItemPrefab: {fileID: 3598623717411781941, guid: 87c17e9f9ebd6e64ea749edbd05cbf5c, type: 3}
+  _inventoryCellPrefab: {fileID: 5601400203041489072, guid: d139228672125c74585ab0b975ab206d, type: 3}
+  _gridLayoutGroup: {fileID: 6378645817342872986}
 --- !u!1 &8098820737458169088
 GameObject:
   m_ObjectHideFlags: 0

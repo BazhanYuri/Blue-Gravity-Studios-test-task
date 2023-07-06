@@ -1,38 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryModel : MonoBehaviour, IInventory
 {
     [SerializeField] private InventoryView _inventoryView;
     [SerializeField] private InventoryItem _inventoryItemPrefab;
+    [SerializeField] private ItemCell _inventoryCellPrefab;
 
     private const int _StepSize = 150;
 
     private ItemCell[][] _itemCells;
-    private InventoryItem[][] _items;
     public bool IsInventoryVisible { get { return _inventoryView.IsVisible; } }
 
+    public Transform Content => _inventoryView.ContentRoot;
 
     public void Initialize(int width, int height)
     {
-        for (int i = 0; i < width * height; i++)
-        {
-            Instantiate(_inventoryItemPrefab, _inventoryView.ContentRoot);            
-        }
         _itemCells = new ItemCell[width][];
+
         for (int i = 0; i < width; i++)
         {
             _itemCells[i] = new ItemCell[height];
-        }
 
+            for (int j = 0; j < height; j++)
+            {
+                _itemCells[i][j] = Instantiate(_inventoryCellPrefab, _inventoryView.ContentRoot);
+            }
+        }
         SetSizeForRect();
     }
 
+
+   
+
+    int widthIndex = 0;
+    int heightIndex = 0;
     public void AddItem(InventoryItem inventoryItem)
     {
-        throw new System.NotImplementedException();
+        _itemCells[widthIndex][heightIndex].SetItem(inventoryItem);
+        widthIndex++;
+
+        if (widthIndex >= _itemCells.Length)
+        {
+            widthIndex = 0;
+            heightIndex++;
+        }
     }
+    public void AddItemByConfigAt(int width, int height, InventoryItemConfig inventoryItemConfig)
+    {
+        InventoryItem newInventoryItem = Instantiate(_inventoryItemPrefab);
+        newInventoryItem.Initialize(inventoryItemConfig, _itemCells[width][height]);
+
+        _itemCells[width][height].SetItem(newInventoryItem);
+    }
+
 
     public void HideInventory()
     {

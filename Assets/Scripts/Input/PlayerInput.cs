@@ -10,6 +10,7 @@ public class PlayerInput : IPlayerInput, IInitializable
 
     public event Action<Vector2> PlayerMoved;
     public event Action InventoryButtonPressed;
+    public event Action InteractButtonPressed;
 
     public void Initialize()
     {
@@ -36,6 +37,10 @@ public class PlayerInput : IPlayerInput, IInitializable
     {
         InventoryButtonPressed?.Invoke();
     }
-    
+
+    public void InvokeInteractButtonPressed(InputAction.CallbackContext context)
+    {
+        InteractButtonPressed?.Invoke();
+    }
 }
 

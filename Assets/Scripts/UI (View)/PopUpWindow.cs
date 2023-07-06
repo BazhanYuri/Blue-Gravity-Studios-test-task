@@ -13,12 +13,12 @@ public class PopUpWindow : MonoBehaviour
         Show();
     }
 
-    public void Hide()
+    public virtual void Hide()
     {
         transform.DOScale(0, 0.2f);
         IsVisible = false;
     }
-    public void Show()
+    public virtual void Show()
     {
         transform.localScale = Vector3.zero;
         transform.DOScale(1, 0.5f);

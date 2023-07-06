@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player Save SO
   m_EditorClassIdentifier: 
   _items:
-    gridSize: {x: 0, y: 0}
+    gridSize: {x: 6, y: 3}
     cellSize: {x: 0, y: 0}
     cells:
     - row:
