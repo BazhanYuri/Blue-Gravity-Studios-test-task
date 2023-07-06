@@ -19,6 +19,7 @@ public class PlayerInput : IPlayerInput, IInitializable
         _inputActions.Newactionmap.Movement.performed += OnMoved;
         _inputActions.Newactionmap.Movement.canceled += OnMoved;
         _inputActions.Newactionmap.Inventory.started += InvokeInventoryPressed;
+        _inputActions.Newactionmap.Interact.started += InvokeInteractButtonPressed;
     }
 
     private void OnMoved(InputAction.CallbackContext context)

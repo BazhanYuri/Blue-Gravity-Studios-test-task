@@ -9,6 +9,7 @@ public class InventoryView : PopUpWindow
     [SerializeField] private Transform _contentRoot;
 
     public Transform ContentRoot { get => _contentRoot;}
+    public Button CloseButton { get => _closeButton;}
 
     private void OnEnable()
     {

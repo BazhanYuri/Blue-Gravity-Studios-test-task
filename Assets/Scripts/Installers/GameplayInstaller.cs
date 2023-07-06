@@ -9,6 +9,7 @@ public class GameplayInstaller : MonoInstaller
     [SerializeField] private PlayerCamera _playerCamera;
     [SerializeField] private Transform _startPoint;
     [SerializeField] private InventoryModel _inventoryModel;
+    [SerializeField] private RectTransform _inventoryPoint;
     [SerializeField] private Canvas _canvas;
 
     public override void InstallBindings()
@@ -59,6 +60,6 @@ public class GameplayInstaller : MonoInstaller
             .AsTransient();
 
         inventory.transform.parent = _canvas.transform;
-        inventory.transform.localPosition = Vector3.zero;
+        inventory.GetComponent<RectTransform>().position = _inventoryPoint.position;
     }
 }

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e474ce5f25175a842945045a809750cb, type: 3}
+  m_Name: Sales Man Config
+  m_EditorClassIdentifier: 
+  _items:
+    gridSize: {x: 3, y: 3}
+    cellSize: {x: 0, y: 0}
+    cells:
+    - row:
+      - {fileID: 11400000, guid: 71ee888b404007142a4da53b17bf9d33, type: 2}
+      - {fileID: 11400000, guid: bee5fe77648c71049aff3557989f3e2a, type: 2}
+      - {fileID: 0}
+    - row:
+      - {fileID: 0}
+      - {fileID: 11400000, guid: 3304ccf1390006a4893d5e9c88febea9, type: 2}
+      - {fileID: 0}
+    - row:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 11400000, guid: ded5a1acaaa440e45aaa4b634ab0dbd3, type: 2}

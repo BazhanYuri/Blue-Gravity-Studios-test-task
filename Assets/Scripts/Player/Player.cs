@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D Rigidbody2D { get => _rigidbody2D;}
     public PlayerPartVisual PlayerPartVisual { get => _playerPartVisual;}
-
+    public IInventory Inventory { get => _inventory;}
 
     public event Action<Collider2D> PlayerEnteredTriger;
     public event Action<Collider2D> PlayerExitedTriger;

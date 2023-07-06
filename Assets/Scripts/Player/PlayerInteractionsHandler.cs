@@ -30,6 +30,8 @@ public class PlayerInteractionsHandler
     {
         if (collider.TryGetComponent(out SalesMan salesMan))
         {
+            Undo();
+
             _currentButton.Hide();
             _interactable = null;
         }
@@ -37,5 +39,9 @@ public class PlayerInteractionsHandler
     private void TryInteract()
     {
         _interactable?.Action();
+    }
+    private void Undo()
+    {
+        _interactable?.Undo();
     }
 }

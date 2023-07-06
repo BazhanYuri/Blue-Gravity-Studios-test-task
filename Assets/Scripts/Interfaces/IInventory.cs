@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public interface IInventory
 {
@@ -10,4 +11,7 @@ public interface IInventory
     void HideInventory();
     void AddItem(InventoryItem inventoryItem);
     void AddItemByConfigAt(int width, int height, InventoryItemConfig inventoryItemConfig);
+    void BlockClose();
+    void UnBlockCloose();
 }
+

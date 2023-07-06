@@ -11,15 +11,18 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
     private InventoryItemConfig _inventoryItemConfig;
     private ItemCell _itemCell;
+    private bool _isForStore = false;
 
     public ItemCell ItemCell { get => _itemCell;}
     public Image IconImage { get => _iconImage;}
+    public bool IsForStore { get => _isForStore;}
 
     public static event Action<InventoryItem> ItemDragged;
     public static event Action ItemNotDragged;
+    public static event Action<InventoryItem> ItemClicked;
 
 
-   
+
 
     public void Initialize(InventoryItemConfig inventoryItemConfig, ItemCell itemCell)
     {
@@ -28,8 +31,13 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
         UpdateView();
     }
 
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (_isForStore)
+        {
+            return;
+        }
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
         ItemDragged?.Invoke(this);
@@ -41,6 +49,10 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (_isForStore)
+        {
+            return;
+        }
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         ItemNotDragged?.Invoke();
@@ -48,6 +60,10 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (_isForStore == true)
+        {
+            ItemClicked?.Invoke(this);
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -59,7 +75,10 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
     {
         _iconImage.transform.DOScale(1.0f, 0.1f);
     }
-
+    public void SetAsForStore()
+    {
+        _isForStore = true;
+    }
     public void SetCell(ItemCell itemCell)
     {
         _itemCell = itemCell;

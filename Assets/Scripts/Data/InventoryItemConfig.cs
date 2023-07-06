@@ -9,4 +9,5 @@ public class InventoryItemConfig : ScriptableObject
     [SerializeField] private int _price;
 
     public Sprite Icon { get => _icon;}
+    public int Price { get => _price;}
 }
