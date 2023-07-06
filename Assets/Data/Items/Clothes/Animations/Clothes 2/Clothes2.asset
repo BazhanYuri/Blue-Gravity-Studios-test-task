@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae831385ed503fe408c019b42c73c192, type: 3}
+  m_Name: Clothes2
+  m_EditorClassIdentifier: 
+  _standingSprite: {fileID: -321550063, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  _runLeftSprites:
+  - {fileID: 29917020, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -762848639, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -1930633488, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: 1517375382, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -1348264485, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: 1319625685, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  _runRightSprites:
+  - {fileID: -394735394, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -961077469, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: 951287837, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -184927943, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -2072923403, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -2030791936, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  _runTopSprites:
+  - {fileID: 1572947462, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: 1360363485, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -137921194, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: 1266936228, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -1850611884, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: 162923013, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  _runDownSprites:
+  - {fileID: 27502911, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: 497708477, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -873047627, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -1278382423, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: 368578221, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}
+  - {fileID: -390646302, guid: ac43e73e04a6e2643bb38ed3b4a4517d, type: 3}

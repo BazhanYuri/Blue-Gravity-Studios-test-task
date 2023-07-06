@@ -14,6 +14,9 @@ public class PlayerInventoryHolder
     private InventoryItem _inventoryItem;
 
 
+    public event Action<InventoryClothesItemConfig> DressUpdated;
+    public event Action<InventoryClothesItemConfig> DressDeleted;
+
     public PlayerInventoryHolder(IInventory inventory, IPlayerInput playerInput)
     {
         _inventory = inventory;
@@ -27,6 +30,7 @@ public class PlayerInventoryHolder
         InventoryItem.ItemDragged += OnItemDraged;
         InventoryItem.ItemNotDragged += OnItemNotDraged;
         ItemCell.ItemDroped += OnItemCellPointerUped;
+        ItemCell.ItemLeft += OnItemLeft;
     }
 
 
@@ -68,6 +72,7 @@ public class PlayerInventoryHolder
     private void OnItemCellPointerUped(ItemCell cell)
     {
         MoveItemToAnotherCell(cell);
+        CheckIfClothes(cell);
     }
     private void MoveItemBack()
     {
@@ -78,5 +83,26 @@ public class PlayerInventoryHolder
         _inventoryItem.SetCell(cell);
         _inventoryItem.transform.DORewind();
         MoveItemBack();
+    }
+    private void CheckIfClothes(ItemCell cell)
+    {
+        if (cell is ItemClothesCell itemClothesCell)
+        {
+            if (cell.InventoryItem.InventoryItemConfig is InventoryClothesItemConfig config)
+            {
+                DressUpdated?.Invoke(config);
+            }
+        }
+    }
+    private void OnItemLeft(ItemCell cell)
+    {
+        if (cell is ItemClothesCell itemClothesCell)
+        {
+            if (cell.InventoryItem.InventoryItemConfig is InventoryClothesItemConfig config)
+            {
+                DressDeleted?.Invoke(config);
+            }
+        }
+       
     }
 }

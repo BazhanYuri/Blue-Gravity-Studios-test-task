@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ public class ItemCell : MonoBehaviour,  IDropHandler
     private InventoryItem _inventoryItem;
 
     public static event Action<ItemCell> ItemDroped;
+    public static event Action<ItemCell> ItemLeft;
 
 
     public bool IsEmpty {
@@ -35,8 +37,11 @@ public class ItemCell : MonoBehaviour,  IDropHandler
         _inventoryItem.transform.parent = transform;
         _inventoryItem.transform.localPosition = Vector3.zero;
     }
-
-    public void OnDrop(PointerEventData eventData)
+    public void InvokeItemLeft()
+    {
+        ItemLeft?.Invoke(this);
+    }
+    public virtual void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag.TryGetComponent(out InventoryItem inventoryItem))
         {
@@ -44,7 +49,11 @@ public class ItemCell : MonoBehaviour,  IDropHandler
             {
                 return;
             }
+            inventoryItem.ItemCell.InvokeItemLeft();
+
+            _inventoryItem = inventoryItem;
             ItemDroped?.Invoke(this);
         }
     }
 }
+ 

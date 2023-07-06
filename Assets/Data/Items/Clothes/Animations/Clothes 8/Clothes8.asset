@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae831385ed503fe408c019b42c73c192, type: 3}
+  m_Name: Clothes8
+  m_EditorClassIdentifier: 
+  _standingSprite: {fileID: -42640564, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  _runLeftSprites:
+  - {fileID: -516234101, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -382890730, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 131239905, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 408062082, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -961090008, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 1825243442, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  _runRightSprites:
+  - {fileID: 1791791762, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -21420339, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -1124280152, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -1176380986, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -544825603, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 1151979928, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  _runTopSprites:
+  - {fileID: -784117517, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 2090052439, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -68564386, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 1563306884, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -1127583650, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 515733890, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  _runDownSprites:
+  - {fileID: -1725854923, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 1726314463, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: 219220794, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -53459751, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -126726879, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}
+  - {fileID: -1079007148, guid: 0db6a6fde946bd7469ebb73797fa6043, type: 3}

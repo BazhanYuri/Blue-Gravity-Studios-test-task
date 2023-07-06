@@ -16,6 +16,7 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
     public ItemCell ItemCell { get => _itemCell;}
     public Image IconImage { get => _iconImage;}
     public bool IsForStore { get => _isForStore;}
+    public InventoryItemConfig InventoryItemConfig { get => _inventoryItemConfig;}
 
     public static event Action<InventoryItem> ItemDragged;
     public static event Action ItemNotDragged;

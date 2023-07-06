@@ -21,6 +21,10 @@ public class PlayerInteractionsHandler
     {
         if (collider.TryGetComponent(out SalesMan salesMan))
         {
+            if (_currentButton != null)
+            {
+                Object.Destroy(_currentButton.gameObject);
+            }
             _currentButton = Object.Instantiate(_buttonInteractionViewPrefab);
             _currentButton.transform.position = salesMan.transform.position + new Vector3(0.5f, 0.5f, 0);
             _interactable = salesMan;

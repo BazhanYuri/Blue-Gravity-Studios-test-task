@@ -11,6 +11,7 @@ public interface IInventory
     void HideInventory();
     void AddItem(InventoryItem inventoryItem);
     void AddItemByConfigAt(int width, int height, InventoryItemConfig inventoryItemConfig);
+    void AddItemByConfigAtFreeSpace(InventoryItemConfig inventoryItemConfig);
     void BlockClose();
     void UnBlockCloose();
 }

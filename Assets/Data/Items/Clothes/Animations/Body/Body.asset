@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae831385ed503fe408c019b42c73c192, type: 3}
+  m_Name: Body
+  m_EditorClassIdentifier: 
+  _standingSprite: {fileID: -70704396, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  _runLeftSprites:
+  - {fileID: 1901300676, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: 570718553, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: 1183388901, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -1268202153, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -135130901, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -1660150060, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  _runRightSprites:
+  - {fileID: -1858881395, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: 384035722, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: 1579838649, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -2020387228, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -566252326, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -1201377574, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  _runTopSprites:
+  - {fileID: -198576488, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -436890759, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -308214792, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -798299541, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -2078505610, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: 281456259, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  _runDownSprites:
+  - {fileID: -790661213, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -769728314, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -1963399116, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: 339366487, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -2102110038, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}
+  - {fileID: -4162544, guid: 360919ce4228b194db6fb2f8226c695b, type: 3}

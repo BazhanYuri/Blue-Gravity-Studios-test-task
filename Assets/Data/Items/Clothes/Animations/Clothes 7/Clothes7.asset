@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae831385ed503fe408c019b42c73c192, type: 3}
+  m_Name: Clothes7
+  m_EditorClassIdentifier: 
+  _standingSprite: {fileID: 1919529136, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  _runLeftSprites:
+  - {fileID: 1501300418, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: 1884848090, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -1796181542, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: 348008126, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -1711376204, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -632173404, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  _runRightSprites:
+  - {fileID: -1259448923, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -877742085, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -488639722, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -2008293330, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -703675158, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -998429497, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  _runTopSprites:
+  - {fileID: 563052218, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -1903052741, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: 220164645, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -320368724, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -1804031569, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -2101909502, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  _runDownSprites:
+  - {fileID: 1950278716, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: 960468087, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -1332192443, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: 935285417, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: 2069035715, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}
+  - {fileID: -1776491494, guid: b8493d84f1f413547a92c0e8251d2042, type: 3}

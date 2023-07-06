@@ -38,7 +38,7 @@ public class PlayerMovement : IPlayerMovement, IInitializable, ITickable
 
     public void Tick()
     {
-        _player.Rigidbody2D.velocity = _movementVector;
+        _player.Rigidbody2D.velocity = _movementVector * 2;
         PlayerMoved?.Invoke(_movementVector);
     }
 }

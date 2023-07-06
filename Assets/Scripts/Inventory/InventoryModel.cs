@@ -61,7 +61,22 @@ public class InventoryModel : MonoBehaviour, IInventory
 
         _itemCells[width][height].SetItem(newInventoryItem);
     }
-
+    public void AddItemByConfigAtFreeSpace(InventoryItemConfig inventoryItemConfig)
+    {
+        int width = _itemCells.Length;
+        int height = _itemCells[0].Length;
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (_itemCells[i][j].InventoryItem == null)
+                {
+                    AddItemByConfigAt(i, j, inventoryItemConfig);
+                    return;
+                }
+            }
+        }
+    }
 
     public void HideInventory()
     {

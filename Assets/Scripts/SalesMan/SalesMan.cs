@@ -4,12 +4,14 @@ using Zenject;
 public class SalesMan : MonoBehaviour, IInteractable
 {
     [SerializeField] private SalesManInventoryModel _inventoryModelPrefab;
+    [SerializeField] private BuyItemPopUp _buyItemPopUpPrefab;
     [SerializeField] private RectTransform _inventoryStorePoint;
     [SerializeField] private SalesManConfig _salesManConfig;
 
     private Player _player;
     private IInventory _inventory;
 
+    private BuyItemPopUp _buyItemPopUp;
 
 
 
@@ -18,7 +20,14 @@ public class SalesMan : MonoBehaviour, IInteractable
     {
         _player = player;
     }
-
+    private void OnEnable()
+    {
+        InventoryItem.ItemClicked += OnItemClicked;
+    }
+    private void OnDisable()
+    {
+        InventoryItem.ItemClicked -= OnItemClicked;
+    }
     public void Action()
     {
         _player.Inventory.ShowInventory();
@@ -62,5 +71,19 @@ public class SalesMan : MonoBehaviour, IInteractable
                 }
             }
         }
+    }
+    private void OnItemClicked(InventoryItem inventoryItem)
+    {
+        if (_buyItemPopUp != null)
+        {
+            Destroy(_buyItemPopUp.gameObject);
+        }
+        _buyItemPopUp = Instantiate(_buyItemPopUpPrefab);
+        _buyItemPopUp.transform.parent = inventoryItem.transform.parent;
+
+        _buyItemPopUp.Initialize(inventoryItem, _player.Inventory);
+        _buyItemPopUp.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0);
+        _buyItemPopUp.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0);
+        _buyItemPopUp.GetComponent<RectTransform>().localPosition = Vector3.zero;
     }
 }

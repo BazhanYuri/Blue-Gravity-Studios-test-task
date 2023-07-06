@@ -22,12 +22,21 @@ public class PlayerAnimationController
     public void Initialize()
     {
         _movement.PlayerMoved += OnPlayerMoved;
+        _player.PlayerInventoryHolder.DressUpdated += OnDressUpdated;
+        _player.PlayerInventoryHolder.DressDeleted += OnDressDeleted;
     }
     private void OnPlayerMoved(Vector2 vector2)
     {
         if (vector2.x == 0 && vector2.y == 0)
         {
-            _player.PlayerPartVisual.SetStandingSprite();
+            for (int i = 0; i < _player.PlayerPartVisual.Length; i++)
+            {
+                if (_player.PlayerPartVisual[i].ClothesAnimationContainer == null)
+                {
+                    continue;
+                }
+                _player.PlayerPartVisual[i].SetStandingSprite();
+            }
             return;
         }
 
@@ -77,31 +86,62 @@ public class PlayerAnimationController
         yield return new WaitForSeconds(0.1f);
         _animationIndex++;
 
-        Sprite[] _sprites = null;
-        switch (direction)
+        for (int i = 0; i < _player.PlayerPartVisual.Length; i++)
         {
-            case Direction.Up:
-                _sprites = _player.PlayerPartVisual.RunTopSprites;
-                break;
-            case Direction.Down:
-                _sprites = _player.PlayerPartVisual.RunDownSprites;
-                break;
-            case Direction.Left:
-                _sprites = _player.PlayerPartVisual.RunLeftSprites;
-                break;
-            case Direction.Right:
-                _sprites = _player.PlayerPartVisual.RunRightSprites;
-                break;
-            default:
-                break;
-        }
+            if (_player.PlayerPartVisual[i].ClothesAnimationContainer == null)
+            {
+                continue;
+            }
+            Sprite[] _sprites = null;
+            switch (direction)
+            {
+                case Direction.Up:
+                    _sprites = _player.PlayerPartVisual[i].ClothesAnimationContainer.RunTopSprites;
+                    break;
+                case Direction.Down:
+                    _sprites = _player.PlayerPartVisual[i].ClothesAnimationContainer.RunDownSprites;
+                    break;
+                case Direction.Left:
+                    _sprites = _player.PlayerPartVisual[i].ClothesAnimationContainer.RunLeftSprites;
+                    break;
+                case Direction.Right:
+                    _sprites = _player.PlayerPartVisual[i].ClothesAnimationContainer.RunRightSprites;
+                    break;
+                default:
+                    break;
+            }
 
-        if (_animationIndex >= _sprites.Length)
-        {
-            _animationIndex = 0;
-        }
+            if (_animationIndex >= _sprites.Length)
+            {
+                _animationIndex = 0;
+            }
 
-        _player.PlayerPartVisual.SetNewSpite(_sprites[_animationIndex]);
+            _player.PlayerPartVisual[i].SetNewSpite(_sprites[_animationIndex]);
+        }
+        
+
+
         _isRunParsing = false;
+    }
+    private void OnDressUpdated(InventoryClothesItemConfig inventoryClothesItemConfig)
+    {
+        for (int i = 0; i < _player.PlayerPartVisual.Length; i++)
+        {
+            if (_player.PlayerPartVisual[i].ClothesType == inventoryClothesItemConfig.ClothesType)
+            {
+                _player.PlayerPartVisual[i].ClothesAnimationContainer = inventoryClothesItemConfig.ClothesAnimationContainer;
+            }
+        }
+    }
+    private void OnDressDeleted(InventoryClothesItemConfig inventoryClothesItemConfig)
+    {
+        for (int i = 0; i < _player.PlayerPartVisual.Length; i++)
+        {
+            if (_player.PlayerPartVisual[i].ClothesType == inventoryClothesItemConfig.ClothesType)
+            {
+                _player.PlayerPartVisual[i].ClothesAnimationContainer = null;
+                _player.PlayerPartVisual[i].Clean();
+            }
+        }
     }
 }

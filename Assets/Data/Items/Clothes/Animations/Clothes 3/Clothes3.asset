@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae831385ed503fe408c019b42c73c192, type: 3}
+  m_Name: Clothes3
+  m_EditorClassIdentifier: 
+  _standingSprite: {fileID: 1839079194, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  _runLeftSprites:
+  - {fileID: 1198840452, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -798903322, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -1557823547, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: 365431493, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -625897019, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -1351608556, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  _runRightSprites:
+  - {fileID: 980710341, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: 1616576916, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: 1872192216, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -53626081, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -1985208886, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -944973308, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  _runTopSprites:
+  - {fileID: 1390064418, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: 1281533193, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -526891730, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: 536172367, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -227844074, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -2057959653, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  _runDownSprites:
+  - {fileID: -1251344056, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: 1514880361, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -1848870486, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -2033196335, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: -333214585, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
+  - {fileID: 219310952, guid: 50c76f3a7c4a0ea49af2b60e3fca43ae, type: 3}
