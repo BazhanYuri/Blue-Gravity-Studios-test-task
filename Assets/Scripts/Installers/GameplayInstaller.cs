@@ -70,5 +70,6 @@ public class GameplayInstaller : MonoInstaller
         inventoryModel.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0.5f);
         inventoryModel.GetComponent<RectTransform>().anchorMax = new Vector2(0, 0.5f);
         inventoryModel.GetComponent<RectTransform>().localPosition = new Vector3(-110, 0, 0);
+        inventory.HideInventory();
     }
 }

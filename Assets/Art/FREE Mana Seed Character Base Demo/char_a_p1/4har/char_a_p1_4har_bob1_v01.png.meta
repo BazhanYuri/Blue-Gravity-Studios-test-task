@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1458,11 +1458,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      char_a_p1_4har_bob1_v01_42: -935081685
+      char_a_p1_4har_bob1_v01_8: 1826361726
       char_a_p1_4har_bob1_v01_16: 2063888450
       char_a_p1_4har_bob1_v01_21: 2045596774
       char_a_p1_4har_bob1_v01_50: 1916869439
-      char_a_p1_4har_bob1_v01_58: 609056972
       char_a_p1_4har_bob1_v01_0: -1117217101
       char_a_p1_4har_bob1_v01_63: -1168727081
       char_a_p1_4har_bob1_v01_34: -261906358
@@ -1506,22 +1505,23 @@ TextureImporter:
       char_a_p1_4har_bob1_v01_31: -148973599
       char_a_p1_4har_bob1_v01_51: 2011660201
       char_a_p1_4har_bob1_v01_53: -635981502
+      char_a_p1_4har_bob1_v01_58: 609056972
       char_a_p1_4har_bob1_v01_40: 1662736857
-      char_a_p1_4har_bob1_v01_24: 81047561
       char_a_p1_4har_bob1_v01_23: 209175342
+      char_a_p1_4har_bob1_v01_24: 81047561
       char_a_p1_4har_bob1_v01_26: 1464554543
-      char_a_p1_4har_bob1_v01_45: 1494894336
       char_a_p1_4har_bob1_v01_10: 205529044
       char_a_p1_4har_bob1_v01_17: 85771971
+      char_a_p1_4har_bob1_v01_45: 1494894336
       char_a_p1_4har_bob1_v01_14: 1504795839
-      char_a_p1_4har_bob1_v01_19: -1640186593
       char_a_p1_4har_bob1_v01_35: 656302077
       char_a_p1_4har_bob1_v01_57: -1412014465
+      char_a_p1_4har_bob1_v01_19: -1640186593
       char_a_p1_4har_bob1_v01_2: 2107321807
       char_a_p1_4har_bob1_v01_7: -398947291
       char_a_p1_4har_bob1_v01_39: 63367031
       char_a_p1_4har_bob1_v01_18: 495555961
-      char_a_p1_4har_bob1_v01_8: 1826361726
+      char_a_p1_4har_bob1_v01_42: -935081685
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

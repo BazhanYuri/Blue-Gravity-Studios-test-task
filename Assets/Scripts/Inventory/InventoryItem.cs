@@ -87,5 +87,6 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
     private void UpdateView()
     {
         _iconImage.sprite = _inventoryItemConfig.Icon;
+        _iconImage.rectTransform.sizeDelta = new Vector2(_iconImage.rectTransform.sizeDelta.x * _inventoryItemConfig.Scale.x, _iconImage.rectTransform.sizeDelta.y * _inventoryItemConfig.Scale.y);
     }
 }

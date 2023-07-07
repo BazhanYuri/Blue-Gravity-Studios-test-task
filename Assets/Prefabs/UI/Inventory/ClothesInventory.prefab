@@ -474,9 +474,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6378645817342872989}
     m_Modifications:
-    - target: {fileID: -8316239494500779229, guid: e48983c51500ab044bda00d4c2661174, type: 3}
-      propertyPath: _clothesType
-      value: 2
+    - target: {fileID: 3995382927800162255, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4872418768812799238, guid: e48983c51500ab044bda00d4c2661174, type: 3}
       propertyPath: m_Pivot.x
@@ -580,6 +580,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6378645817342872989}
     m_Modifications:
+    - target: {fileID: -8316239494500779229, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: _clothesType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995382927800162255, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1068173782, guid: 47433e64bad7ed54e9f93b9d7827941b, type: 3}
+    - target: {fileID: 3995382927800162255, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496993941311870661, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496993941311870661, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496993941311870661, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.94
+      objectReference: {fileID: 0}
     - target: {fileID: 4872418768812799238, guid: e48983c51500ab044bda00d4c2661174, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -685,6 +709,14 @@ PrefabInstance:
     - target: {fileID: -8316239494500779229, guid: e48983c51500ab044bda00d4c2661174, type: 3}
       propertyPath: _clothesType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995382927800162255, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 603358610, guid: a9ad022666ed7e847aed2093a304fb86, type: 3}
+    - target: {fileID: 3995382927800162255, guid: e48983c51500ab044bda00d4c2661174, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4872418768812799238, guid: e48983c51500ab044bda00d4c2661174, type: 3}
       propertyPath: m_Pivot.x

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c3f301ae487ef4da4be82b6fd5c091, type: 3}
   m_Name: Clothes_6
   m_EditorClassIdentifier: 
-  _icon: {fileID: 782345965, guid: daf3e4982bcccc0448345fd7e975f1e1, type: 3}
-  _price: 0
+  _icon: {fileID: 21300000, guid: 69d787d3bfa5e5147a25addb08274bde, type: 2}
+  _price: 35
+  _scale: {x: 3, y: 3}
   _clothesType: 1
   _clothesAnimationContainer: {fileID: 11400000, guid: dfe7edc5d4a2e7445b336ae2d52196bc, type: 2}
